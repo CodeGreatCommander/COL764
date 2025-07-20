@@ -1,0 +1,6 @@
+n_estimators: 154
+learning_rate: 0.0792314458717291
+max_depth: 6
+random_state: 0
+min_samples_split: 4
+min_samples_leaf: 6

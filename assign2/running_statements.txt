@@ -1,0 +1,13 @@
+./w2v-local_rerank.sh ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../output/output.txt ../output/expansion.txt
+
+.\w2v-local_rerank.sh ..\dataset\queries.tsv ..\dataset\top100docs.tsv ..\dataset\temp\docs.txt ..\output\output.txt ..\output\expansion.txt
+
+source w2v-gen_rerank.sh ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../dataset/word2vec.300d.txt ../output/output.txt ../output/expansion.txt
+
+python main.py ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../output/output.txt ../output/expansion.txt True ../dataset/word2vec.300d.txt False
+
+python main.py ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../output/output.txt ../output/expansion.txt False False
+
+python main.py ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../output/output.txt ../output/expansion.txt True ../dataset/glove.6B.300d.txt True
+
+python main.py ../dataset/queries.tsv ../dataset/top100docs.tsv ../dataset/temp/docs.txt ../output/output.txt ../output/expansion.txt False True
